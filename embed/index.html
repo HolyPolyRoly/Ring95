@@ -37,7 +37,8 @@
         console.log("found it!")
       }
     };
-    document.getElementById("next").href=list[(lil+1) & list.length-1]; 
+    console.log(window.top.location.pathname);
+    document.getElementById("next").href=list[(lil+1) & list.length]; 
   })
   if (parent !== window) {
     const referer = encodeURIComponent(new URL(document.referrer).origin);
