@@ -24,9 +24,8 @@
 
 <script>
 //window.top.location.href = "http://example.com";
-  function getBaseUrl() {
-    var re = new RegExp(/^.*\//);
-    return re.exec(window.top.location.href);
+function getBaseUrl() {
+    return window.location.href.match(/^.*\//);
 }
   fetch('list.txt').then(r => r.text()).then(contents => {
     var text=contents;
