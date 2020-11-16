@@ -32,12 +32,12 @@
     list=text.split("\n")
     var lil
     for (i = 0; i < list.length; i++) {
-      if (getBaseUrl() == list[i]) {
+      if (window.top.location.pathname == list[i]) {
         var lil=i
         console.log("found it!")
       }
     };
-    document.getElementById("next").href=list[(lil+1) & list.length]; 
+    document.getElementById("next").href=list[(lil+1) & list.length-1]; 
   })
   if (parent !== window) {
     const referer = encodeURIComponent(new URL(document.referrer).origin);
