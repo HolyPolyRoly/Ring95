@@ -1,5 +1,9 @@
 <html lang="en"><head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
+  <base target="_parent">
   <style>
   body {
   background-color:black;
@@ -39,6 +43,9 @@ function getBaseUrl() {
     console.log(list)
     document.getElementById("next").href=list[(lil+10) % list.length]; 
   })
+    if (parent !== window) {
+    const referer = encodeURIComponent(new URL(document.referrer).origin);
+    }
 </script>
 
 
