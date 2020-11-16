@@ -24,20 +24,20 @@
 
 <script>
 //window.top.location.href = "http://example.com";
+  function getBaseUrl() {
+    var re = new RegExp(/^.*\//);
+    return re.exec(window.top.location.href);
+  }
   fetch('list.txt').then(r => r.text()).then(contents => {
     var text=contents;
-    console.log(window.top.location.href)
     list=text.split("\n")
     var lil
     for (i = 0; i < list.length; i++) {
-        console.log(list[i]);
-        console.log(window.top.location.href)
-      if (window.top.location.href == list[i]) {
+      if (getBaseUrl() == list[i]) {
         var lil=i
         console.log("found it!")
       }
     };
-    console.log("lil")
     document.getElementById("next").href=list[(lil+1) & list.length-1]; 
   })
   if (parent !== window) {
