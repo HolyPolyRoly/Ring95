@@ -39,7 +39,7 @@ function getBaseUrl() {
     };
     console.log( `${getBaseUrl()}`);
     console.log(list)
-    document.getElementById("next").href=list[(lil+1) & list.length-1]; 
+    document.getElementById("next").href=list[lil+1]; 
   })
   if (parent !== window) {
     const referer = encodeURIComponent(new URL(document.referrer).origin);
