@@ -16,7 +16,7 @@
 
 <body class="embed">
 <h1>Ring95</h1>
-<a id="next" href=""><b>NEXT</b></a>
+<a id="next" href="about:blank"><b>NEXT</b></a>
 
 <script>
 //window.top.location.href = "http://example.com";
@@ -37,7 +37,7 @@ function getBaseUrl() {
     };
     console.log( `${getBaseUrl()}`);
     console.log(list)
-    document.getElementById("next").href=list[(lil+1) % (list.length-1)]; 
+    document.getElementById("next").href=list[(lil+10) % list.length]; 
   })
 </script>
 
