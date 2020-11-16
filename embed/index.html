@@ -38,7 +38,7 @@
         console.log("found it!")
       }
     };
-    console.log(window.top.location.pathname+getBaseUrl());
+    console.log(toString(window.top.location.pathname)+toString(getBaseUrl()));
     document.getElementById("next").href=list[(lil+1) & list.length-1]; 
   })
   if (parent !== window) {
